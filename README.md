@@ -2,19 +2,19 @@ Strahlengeier
 =============
 A simple  vertical scrolling shooter game.
 
-**uƒVƒ…ƒgƒ‰[ƒŒƒ“ƒKƒCƒA[v**  
-ƒVƒ“ƒvƒ‹‚ÈcƒXƒNƒ[ƒ‹ƒVƒ…[ƒeƒBƒ“ƒOB  
-Œ»ÝƒAƒ‹ƒtƒ@”Å’ö“x‚Ì–¢Š®¬•iB
+**ï¿½uï¿½Vï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½Cï¿½Aï¿½[ï¿½v**  
+ï¿½Vï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Ècï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Vï¿½ï¿½ï¿½[ï¿½eï¿½Bï¿½ï¿½ï¿½Oï¿½B  
+ï¿½ï¿½ï¿½ÝƒAï¿½ï¿½ï¿½tï¿½@ï¿½Å’ï¿½ï¿½xï¿½Ì–ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½B
 
-Œ»Ý‚Íƒ\[ƒXƒR[ƒh‚Ì‚ÝŒöŠJB  
-‚»‚Ì‘¼ƒŠƒ\[ƒX‚ÍŒ —˜ŠÖŒW‚ðƒNƒŠƒA‚µŽŸ‘æŒöŠJ—\’èB  
-—V‚×‚éƒoƒCƒiƒŠ‚Íˆê’è‚ÌƒNƒIƒŠƒeƒB‚ªŠm•Û‚Å‚«A‚©‚ÂêŠ‚ªŠm•Û‚Å‚«ŽŸ‘æAŒöŠJ—\’èB
+ï¿½ï¿½ï¿½Ý‚Íƒ\ï¿½[ï¿½Xï¿½Rï¿½[ï¿½hï¿½Ì‚ÝŒï¿½ï¿½Jï¿½B  
+ï¿½ï¿½ï¿½Ì‘ï¿½ï¿½ï¿½ï¿½\ï¿½[ï¿½Xï¿½ÍŒï¿½ï¿½ï¿½ï¿½ÖŒWï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½\ï¿½ï¿½B  
+ï¿½Vï¿½×‚ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½Íˆï¿½ï¿½ÌƒNï¿½Iï¿½ï¿½ï¿½eï¿½Bï¿½ï¿½ï¿½mï¿½Û‚Å‚ï¿½ï¿½Aï¿½ï¿½ï¿½ÂêŠï¿½ï¿½ï¿½mï¿½Û‚Å‚ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Jï¿½\ï¿½ï¿½B
 
-ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg
+ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Vï¿½ï¿½ï¿½bï¿½g
 --------
 ![Screen Shot](screenshot.png)
 
-‚»‚Ì‘¼
+ï¿½ï¿½ï¿½Ì‘ï¿½
 ---------
-This source code is released under the MIT License. Please see LICENSE.
-‚±‚Ìƒ\[ƒXƒR[ƒh‚ÍMIT License‚ÅŒöŠJ‚³‚ê‚Ä‚¢‚Ü‚·B
+This source code is released under the MIT License. Please see LICENSE.  
+ï¿½ï¿½ï¿½Ìƒ\ï¿½[ï¿½Xï¿½Rï¿½[ï¿½hï¿½ï¿½MIT Licenseï¿½ÅŒï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B
