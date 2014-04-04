@@ -13,3 +13,8 @@ A simple  vertical scrolling shooter game.
 スクリーンショット
 --------
 ![Screen Shot](screenshot.png)
+
+その他
+---------
+This source code is released under the MIT License. Please see LICENSE.
+このソースコードはMIT Licenseで公開されています。
