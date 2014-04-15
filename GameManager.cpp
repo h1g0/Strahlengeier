@@ -326,9 +326,10 @@ void GameManager::GameSt1(GameManager& parent, int frame){
 			bigEnm.bulletImage = gEnemyBullet.imgCommon;
 			bigEnm.rotateWhenDraw = false;
 
-			static const int bigEnmPtnCap = 1;
+			static const int bigEnmPtnCap = 3;
 			int bigEnmPtn = GetRand(bigEnmPtnCap - 1);
 			switch (bigEnmPtn){
+				//上から来て下へ
 			case 0:
 				bigEnm.x = 64 + GetRand(SCR_WIDTH - 128);
 				bigEnm.y = -64;
@@ -336,6 +337,23 @@ void GameManager::GameSt1(GameManager& parent, int frame){
 				bigEnm.speed = 10;
 				bigEnm.MoveFunc = &Enemy::BecomeSlow4BigEnm;
 				break;
+				//左から来て右へ
+			case 1:
+				bigEnm.x = -64;
+				bigEnm.y = GetRand(SCR_HEIGHT / 4) + 64;
+				bigEnm.angle = (-5 + GetRand(100) / 10) * RAD;
+				bigEnm.speed = 10;
+				bigEnm.MoveFunc = &Enemy::BecomeSlow4BigEnm;
+				break;
+				//右から来て左へ
+			case 2:
+				bigEnm.x = SCR_WIDTH+64;
+				bigEnm.y = GetRand(SCR_HEIGHT / 4) + 64;
+				bigEnm.angle = (175 + GetRand(100) / 10) * RAD;
+				bigEnm.speed = 10;
+				bigEnm.MoveFunc = &Enemy::BecomeSlow4BigEnm;
+				break;
+
 			default:
 				bigEnm.x = 64 + GetRand(SCR_WIDTH - 128);
 				bigEnm.y = -64;
@@ -345,8 +363,11 @@ void GameManager::GameSt1(GameManager& parent, int frame){
 				break;
 			}
 
-			static const int bigEnmBltPtnCap = 4;
+			static const int bigEnmBltPtnCap = 6;
 			int bigEnmBltPtn = GetRand(bigEnmBltPtnCap - 1);
+
+			//bigEnmBltPtn = 2; //デバッグ用
+
 			switch (bigEnmBltPtn){
 			case 0:
 				bigEnm.ShotFunc = &EnemyBullet::Circle20way;
@@ -359,6 +380,12 @@ void GameManager::GameSt1(GameManager& parent, int frame){
 				break;
 			case 3:
 				bigEnm.ShotFunc = &EnemyBullet::Circle20way2Plyr;
+				break;
+			case 4:
+				bigEnm.ShotFunc = &EnemyBullet::DownBroom;
+				break;
+			case 5:
+				bigEnm.ShotFunc = &EnemyBullet::BigCircle;
 				break;
 
 			default:

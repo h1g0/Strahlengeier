@@ -9,7 +9,7 @@
 #define SCR_WIDTH 640
 #define SCR_HEIGHT 480
 
-#define PJVERSION _T("ver. 0.4.0a")
+#define PJVERSION _T("ver. 0.5.0a")
 #define PJTITLE _T("Strahlengeier "##PJVERSION) //タイトル
 #define PHI_F DX_PI_F
 extern bool isDebug; //デバッグモード？

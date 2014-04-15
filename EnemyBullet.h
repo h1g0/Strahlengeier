@@ -64,11 +64,11 @@ public:
 			double rad = MyMath::atan2(obj.GetPlayer().GetY() - obj.GetY(),
 				                       obj.GetPlayer().GetX() - obj.GetX());
 			obj.SetAngle(rad);
-			obj.SetSpeed(5);
+			obj.SetSpeed(4);
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = GetRand(30) + obj.GetRankCls().GetInvLiner(30);
+			resultPtr->waitFrame = GetRand(30) + obj.GetRankCls().GetInvLiner(50);
 		}
 	}
 	static void PlayerOrientedRandom(EnemyBullet& obj, ReturnInfo *resultPtr){ //Ž©‹@‘_‚¢‚Î‚çŽT‚«
@@ -78,11 +78,11 @@ public:
 			double randRad=(GetRand(400)*0.1 - 20)*RAD;
 			rad+=randRad;
 			obj.SetAngle(rad);
-			obj.SetSpeed(4+GetRand(200)*0.01);
+			obj.SetSpeed(2+GetRand(200)*0.01);
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = GetRand(30) + obj.GetRankCls().GetInvLiner(30);
+			resultPtr->waitFrame = GetRand(30) + obj.GetRankCls().GetInvLiner(50);
 		}
 	}
 
@@ -90,7 +90,7 @@ public:
 		if(obj.GetIsCreating() == true){
 			double rad = (obj.GetRankCls().GetLiner()>0.5)?obj.GetAngleB4() + 18 * RAD:obj.GetAngleB4() + 36 * RAD;
 			obj.SetAngle(rad);
-			obj.SetSpeed(3);
+			obj.SetSpeed(2);
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
@@ -104,9 +104,9 @@ public:
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = 270*RAD;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = GetRand(30) + obj.GetRankCls().GetInvLiner(30);
+			resultPtr->waitFrame = GetRand(30) + obj.GetRankCls().GetInvLiner(50);
 		}else{
-			if(obj.GetVy()<5){
+			if(obj.GetVy()<4){
 				obj.SetVy(obj.GetVy() + 0.1);
 				obj.SetAngle(MyMath::atan2(obj.GetVy(),obj.GetVx()));
 			}
@@ -123,7 +123,7 @@ public:
 			resultPtr->shotCount = 1;
 			resultPtr->waitFrame = GetRand(40) + obj.GetRankCls().GetInvLiner(30);
 		}else{
-			if(obj.GetVy()<5){
+			if(obj.GetVy()<4){
 				obj.SetVx(obj.GetVx()*0.9999);
 				obj.SetVy(obj.GetVy() + 0.2);
 				obj.SetAngle(MyMath::atan2(obj.GetVy(),obj.GetVx()));
@@ -138,7 +138,7 @@ public:
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = GetRand(20) + obj.GetRankCls().GetInvLiner(30);
+			resultPtr->waitFrame = GetRand(20) + obj.GetRankCls().GetInvLiner(50);
 		}
 	}
 	static void RestrictedRandom(EnemyBullet& obj, ReturnInfo *resultPtr){ //‰º•û‚Ì‚Ý‚Ìƒ‰ƒ“ƒ_ƒ€
@@ -149,7 +149,7 @@ public:
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = GetRand(60) + obj.GetRankCls().GetInvLiner(30);
+			resultPtr->waitFrame = GetRand(60) + obj.GetRankCls().GetInvLiner(50);
 		}
 	}
 
@@ -157,44 +157,44 @@ public:
 		if (obj.GetIsCreating() == true){
 			double rad = obj.GetAngleB4()+18*RAD;
 			obj.SetAngle(rad);
-			obj.SetSpeed(3);
+			obj.SetSpeed(2);
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = (obj.GetShotCount() % 20 == 19) ? obj.GetRankCls().GetInvLiner(30) + 10 : 0;
+			resultPtr->waitFrame = (obj.GetShotCount() % 20 == 19) ? obj.GetRankCls().GetInvLiner(50) + 10 : 0;
 		}
 	}
 	static void Rotate20way(EnemyBullet& obj, ReturnInfo *resultPtr){ //ù‰ñ–C“ƒ*4
 		if (obj.GetIsCreating() == true){
 			double rad = obj.GetAngleB4() + 92 * RAD;
 			obj.SetAngle(rad);
-			obj.SetSpeed(3);
+			obj.SetSpeed(2);
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = (obj.GetShotCount() % 4 == 3) ? obj.GetRankCls().GetInvLiner(8) + 2:0;
+			resultPtr->waitFrame = (obj.GetShotCount() % 4 == 3) ? obj.GetRankCls().GetInvLiner(12) + 2:0;
 		}
 	}
 	static void Circle72way(EnemyBullet& obj, ReturnInfo *resultPtr){ //72way
 		if (obj.GetIsCreating() == true){
 			double rad = obj.GetAngleB4() + 5 * RAD;
 			obj.SetAngle(rad);
-			obj.SetSpeed(2+(obj.GetShotCount()%10)/5);
+			obj.SetSpeed(3+MyMath::sin((obj.GetShotCount()%72)*80*RAD)*1);
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = (obj.GetShotCount() % 72 == 71) ? obj.GetRankCls().GetInvLiner(60) + 10 : 0;
+			resultPtr->waitFrame = (obj.GetShotCount() % 72 == 71) ? obj.GetRankCls().GetInvLiner(80) + 10 : 0;
 		}
 	}
 	static void Circle20way2Plyr(EnemyBullet& obj, ReturnInfo *resultPtr){ //20way“¯S‰~’e‚©‚çŽ©‹@‘_‚¢‚Ö
 		if (obj.GetIsCreating() == true){
 			double rad = obj.GetAngleB4() + 18 * RAD;
 			obj.SetAngle(rad);
-			obj.SetSpeed(5);
+			obj.SetSpeed(2 + obj.GetRankCls().GetInvLiner(3));
 			obj.SetVxVyFromSpeedAngle();
 			resultPtr->angleShot = rad;
 			resultPtr->shotCount = 1;
-			resultPtr->waitFrame = (obj.GetShotCount() % 20 == 19) ? obj.GetRankCls().GetInvLiner(90) + 30 : 0;
+			resultPtr->waitFrame = (obj.GetShotCount() % 20 == 19) ? obj.GetRankCls().GetInvLiner(90) + 10 : 0;
 		}
 		else if (obj.GetFrame()==20){
 			double rad = MyMath::atan2(obj.GetPlayer().GetY() - obj.GetY(),
@@ -202,6 +202,30 @@ public:
 			obj.SetAngle(rad);
 			obj.SetSpeed(5);
 			obj.SetVxVyFromSpeedAngle();
+		}
+	}
+
+	static void DownBroom(EnemyBullet& obj, ReturnInfo *resultPtr){ //‰º‚Ö‚Ìâ´‘|‚«
+		if (obj.GetIsCreating() == true){
+			double rad = (90 + MyMath::sin((obj.GetShotCount() % 45) * 16 * RAD)*45) * RAD;
+			obj.SetAngle(rad);
+			obj.SetSpeed(2);
+			obj.SetVxVyFromSpeedAngle();
+			resultPtr->angleShot = rad;
+			resultPtr->shotCount = 1;
+			resultPtr->waitFrame = (obj.GetShotCount() % 45 == 44) ? obj.GetRankCls().GetInvLiner(90) + 30 : obj.GetRankCls().GetInvLiner(3) + 1;
+		}
+	}
+
+	static void BigCircle(EnemyBullet& obj, ReturnInfo *resultPtr){ //‘å‚«‚¢‰~’e‚ðŒ‚‚Âù‰ñ–C“ƒ
+		if (obj.GetIsCreating() == true){
+			double rad = (obj.GetShotCount() % 10 == 0) ? obj.GetAngleB4() + 80 * RAD : obj.GetAngleB4()+2 * RAD;
+			obj.SetAngle(rad);
+			obj.SetSpeed(2 + MyMath::sin((obj.GetShotCount() % 10)*18*RAD)*0.5);
+			obj.SetVxVyFromSpeedAngle();
+			resultPtr->angleShot = rad;
+			resultPtr->shotCount = 1;
+			resultPtr->waitFrame = (obj.GetShotCount() % 40 == 39) ? obj.GetRankCls().GetInvLiner(50) + 10 : 0;
 		}
 	}
 
