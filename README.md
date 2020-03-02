@@ -1,20 +1,45 @@
-Strahlengeier
-=============
-A simple  vertical scrolling shooter game.
+# Strahlengeier
 
-**「シュトラーレンガイアー」**  
+A simple bullet-hell vertical-scrolling shooter game.  
+With respect for [Nomltest]( http://www.yomogi.sakura.ne.jp/~si/ ).
+
+**シュトラーレンガイアー**
+
 シンプルな縦スクロールシューティング。  
-現在アルファ版程度の未完成品。
+[Nomltest]( http://www.yomogi.sakura.ne.jp/~si/ )をリスペクトしたゲームになっています。
 
-現在はソースコードのみ公開。  
-その他リソースは権利関係をクリアし次第公開予定。  
-遊べるバイナリは一定のクオリティが確保でき、かつ場所が確保でき次第、公開予定。
+## Screenshots / スクリーンショット
 
-スクリーンショット
---------
-![Screen Shot](screenshot.png)
+![Screenshot](screenshot.png)
 
-その他
----------
-This source code is released under the MIT License. Please see LICENSE.  
-このソースコードはMIT Licenseで公開されています。
+## How to play / 遊び方
+
+`bin/Strahlengeier.exe` is the executable (i.e. playable) binary.
+
+- Z key: Shoot
+- X key: Slow down
+- F3 key: Take screenshots
+
+---
+`bin/Strahlengeier.exe` が遊べるバイナリです。
+
+- Zキー：ショット
+- Xキー：スロー
+- F3キー：スクリーンショット
+
+## Dependent libraries / 使用ライブラリ
+
+- [DxLib]( https://dxlib.xsrv.jp/ )
+- [Boost]( https://www.boost.org/ )
+
+## LICENSES / 使用素材等
+
+- BGM: [Cyber-Rainforce]( https://cyber-rainforce.net/ )
+
+## Others / その他
+
+This game uses a font [Neuropol]( http://typodermicfonts.com/neuropol/ ), but can't embed the font file because of the licensing problem. It can be embedded by downloading and placing under the name `bin/img/font.ttf`.
+
+---
+
+このゲームは[Neuropol]( http://typodermicfonts.com/neuropol/ )というフォントを使用していますが、ライセンスの問題でここで配布しているバイナリにはフォントファイルが埋め込まれていません。フォントファイルをダウンロードして `bin/img/font.ttf` という名前で配置することで埋め込むことができます。
