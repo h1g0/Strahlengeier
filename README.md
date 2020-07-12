@@ -12,16 +12,40 @@ With respect for [Nomltest]( http://www.yomogi.sakura.ne.jp/~si/ ).
 
 ![Screenshot](screenshot.png)
 
-## How to play / 遊び方
+## Download and install / ダウンロードとインストール
 
-`bin/Strahlengeier.exe` is the executable (i.e. playable) binary.
+### Without source code / ソースコード無し
+
+1. Download from [here](https://github.com/h1g0/Strahlengeier/releases).
+2. Unzip
+3. Run `Strahlengeier.exe`.
+4. To uninstall, just delete the directory.
+
+---
+
+1. [ここ](https://github.com/h1g0/Strahlengeier/releases)からダウンロード
+2. ダウンロードしたZipを解凍する。
+3. `Strahlengeier.exe`を実行する。
+4. アンインストールする場合、ディレクトリを消すだけでOK。
+
+### With source code / ソースコード付き
+
+```bash
+git clone git@github.com:h1g0/Strahlengeier.git
+```
+
+Note: The following dependency libraries are required to build.
+
+- [DxLib]( https://dxlib.xsrv.jp/ )
+- [Boost]( https://www.boost.org/ )
+
+## How to play / 遊び方
 
 - Z key: Shoot
 - X key: Slow down
 - F3 key: Take screenshots
 
 ---
-`bin/Strahlengeier.exe` が遊べるバイナリです。
 
 - Zキー：ショット
 - Xキー：スロー
@@ -38,8 +62,8 @@ With respect for [Nomltest]( http://www.yomogi.sakura.ne.jp/~si/ ).
 
 ## Others / その他
 
-This game uses a font [Neuropol]( http://typodermicfonts.com/neuropol/ ), but can't embed the font file because of the licensing problem. It can be embedded by downloading and placing under the name `bin/img/font.ttf`.
+This game uses a font [Neuropol]( http://typodermicfonts.com/neuropol/ ), but can't embed the font file because of the licensing problem. It can be embedded by downloading and placing under the name `img/font.ttf`.
 
 ---
 
-このゲームは[Neuropol]( http://typodermicfonts.com/neuropol/ )というフォントを使用していますが、ライセンスの問題でここで配布しているバイナリにはフォントファイルが埋め込まれていません。フォントファイルをダウンロードして `bin/img/font.ttf` という名前で配置することで埋め込むことができます。
+このゲームは[Neuropol]( http://typodermicfonts.com/neuropol/ )というフォントを使用していますが、ライセンスの問題でここで配布しているバイナリにはフォントファイルが埋め込まれていません。フォントファイルをダウンロードして `img/font.ttf` という名前で配置することで埋め込むことができます。
